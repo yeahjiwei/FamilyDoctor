@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/doctorDatabase" method="post">
+    <input type="text" name="doctorName" id="doctorName" placeholder="请输入医生姓名">
+    <input type="text" name="doctorNum" id="doctorNum" placeholder="请输入医生编号">
+    <input type="text" name="hospitalName" id="hospitalName" placeholder="请输入医院名称">
+    <input type="text" name="department" id="department" placeholder="请输入科室名称">
+    <input type="text" name="specialty" id="specialty" placeholder="请输入疾病关键词">
+
+    <input type="submit" value="搜索">
+
+    <div>
+        <table>
+            {% if searchResult.tag != 0 %}
+            <tr>
+                <th>名字</th>
+                <th>编号</th>
+                <th>电话</th>
+                <th>医院</th>
+                <th>科室</th>
+                <th>专长</th>
+            </tr>
+
+            {% for i in searchResult.data %}
+            <tr>
+                <td>{{ i.doctorName }}</td>
+                <td>{{ i.doctorNum }}</td>
+                <td>{{ i.phoneNum }}</td>
+                <td>{{ i.hospitalName }}</td>
+                <td>{{ i.department }}</td>
+                <td>{{ i.specialty }}</td>
+            </tr>
+                {% endfor %}
+            {% endif %}
+        </table>
+    </div>
+</form>
+</body>
+</html>

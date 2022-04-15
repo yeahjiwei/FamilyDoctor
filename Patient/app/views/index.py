@@ -1,3 +1,7 @@
+"""
+注册、登录及个人中心
+"""
+
 from functools import wraps
 from flask import request, render_template, redirect, url_for, flash, session, Blueprint, Response
 from sqlalchemy import and_, or_
