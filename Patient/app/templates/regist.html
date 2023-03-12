@@ -1,24 +1,84 @@
-<!-- templates/regist.html -->
+<!DOCTYPE html>
+<html lang="en" class="h-100">
 
-<DOCTYPE html>
-<html lang="zh-han">
 <head>
-    <title>注册</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
-</head>
-<body>
-    <form method="post" action='/regist'>
-        <label>用户名：<input type="text" name="username" value=""></label></br>
-        <label>密码：<input type="password" name="password1" value=""></label></br>
-        <label>重复密码：<input type="password" name="password2" value=""></label></br>
-        <label>邮箱：<input type="email" name="email" value=""></label></br>
-        <input type="submit" value="注册">
-    </form>
+    <meta name="description" content="Innap : Hotel Admin Template">
 
+    <!-- PAGE TITLE HERE -->
+    <title>注册</title>
+
+    <link href="../static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="vh-100">
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                    <a href="index.html"><img
+                                            src="https://www.17sucai.com/preview/1097306/2021-07-20/xhtml/images/logo-full.png"
+                                            alt=""></a>
+                                </div>
+                                <h3 class="text-center mb-4">注 册</h3>
+                                <form action="/regist" method="post">
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>用户名</strong></label>
+                                        <input type="text" class="form-control" name="username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>实名</strong></label>
+                                        <input type="text" class="form-control" name="patientName">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>电话</strong></label>
+                                        <input type="text" class="form-control" name="phoneNum">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>密码</strong></label>
+                                        <input type="password" class="form-control" name="password1">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>重复密码</strong></label>
+                                        <input type="password" class="form-control" name="password2">
+                                    </div>
+                                    <div class="text-center mt-4">
+                                        <button type="submit" class="btn btn-primary btn-block">点击注册</button>
+                                    </div>
+                                </form>
+                                <div class="new-account mt-3">
+                                    <p>已有账户？<a class="text-primary" href="/login">点击登录</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     {% if error %}
-        <p>{{error}}</p>
+        <p>{{ error }}</p>
     {% endif %}
+</div>
+
+<!--**********************************
+	Scripts
+***********************************-->
+<!-- Required vendors -->
+<script src="../static/js/global.min.js"></script>
+<script src="../static/js/custom.min.js"></script>
+<script src="../static/js/deznav-init.js"></script>
+<script src="../static/js/styleSwitcher.js"></script>
 </body>
 </html>

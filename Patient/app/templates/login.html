@@ -1,25 +1,103 @@
-<!-- templates/login.html -->
-
 <!DOCTYPE html>
-<html lang="zh-han">
+<html lang="en" class="h-100">
+
 <head>
-    <title>登录</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <meta name="description" content="Innap : Hotel Admin Template">
+
+    <!-- PAGE TITLE HERE -->
+    <title>登录</title>
+
+    <link href="../static/css/sweetalert2.min.css" rel="stylesheet">
+    <link href="../static/css/nice-select.css" rel="stylesheet">
+    <link href="../static/css/style.css" rel="stylesheet">
+
 </head>
-<body>
-    <form method="post" action='/login'>
-        <label>用户名：<input type="text" name="username" value=""></label><br>
-        <label>密码：<input type="password" name="password" value=""></label><br>
-        <label><input type="text" name="qrcode"></label>
-        <img src="/codes/" alt="captcha" title="点击切换"
-                         onclick="this.src='codes/?'+Math.random()"/><br>
-        <input type="submit" value="登录">
-    </form>
+
+<body class="vh-100">
+
+<div class="authincation h-100">
+    <div class="container h-100">
+        <div class="row justify-content-center h-100 align-items-center">
+            <div class="col-md-6">
+                <div class="authincation-content">
+                    <div class="row no-gutters">
+                        <div class="col-xl-12">
+                            <div class="auth-form">
+                                <div class="text-center mb-3">
+                                    <a href="index.html"><img
+                                            src="https://www.17sucai.com/preview/1097306/2021-07-20/xhtml/images/logo-full.png"
+                                            alt=""></a>
+                                </div>
+                                <h3 class="text-center mb-4">登 录</h3>
+                                <form action="/login" method="post">
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>账户</strong></label>
+                                        <input type="text" class="form-control" name="username">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>密码</strong></label>
+                                        <input type="password" class="form-control" name="password">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="mb-1"><strong>验证码</strong></label>
+                                        <input type="text" class="form-control" name="qrcode">
+                                        <img src="/codes/" alt="captcha" title="点击切换"
+                                             onclick="this.src='codes/?'+Math.random()"/><br>
+                                    </div>
+                                    <div class="row d-flex justify-content-between mt-4 mb-2">
+                                        <div class="mb-3">
+                                            <a href="javascript:;">忘记密码?</a>
+                                        </div>
+                                    </div>
+                                    <div class="text-center card-body card-content">
+                                        <button type="submit" class="btn btn-primary btn-block">点击登录
+                                        </button>
+                                    </div>
+                                </form>
+                                <div class="new-account mt-3">
+                                    <p>没有账户? <a class="text-primary" href="/regist">点击注册</a></p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     {% if error %}
-        <p>{{error}}</p>
+        <p>{{ error }}</p>
     {% endif %}
+</div>
+
+
+<!--**********************************
+    Scripts
+***********************************-->
+<!-- Required vendors -->
+
+<script type="text/javascript">
+    function subConfirm() {
+        setInterval("document.all.loginform.submit()", 2000);
+    }
+</script>
+<script src="../static/js/global.min.js"></script>
+
+<script src="../static/js/sweetalert2.min.js"></script>
+<script src="../static/js/sweetalert.init.js"></script>
+
+<script src="../static/js/jquery.nice-select.min.js"></script>
+
+<script src="../static/js/custom.min.js"></script>
+<script src="../static/js/deznav-init.js"></script>
+<script src="../static/js/demo.js"></script>
+<script src="../static/js/styleSwitcher.js"></script>
 </body>
 </html>

@@ -13,10 +13,8 @@ def create_app():
     # 注册蓝图
     from .views.index import index_blueprint
     app.register_blueprint(index_blueprint)
-    from .views.doctor_info import doctor_info_blueprint
-    app.register_blueprint(doctor_info_blueprint)
-    from .views.doctorDatabase import doctorDatabase_blueprint
-    app.register_blueprint(doctorDatabase_blueprint)
+    from .views.page import page_blueprint
+    app.register_blueprint(page_blueprint)
 
     return app
 

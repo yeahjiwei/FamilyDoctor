@@ -1,0 +1,3 @@
+INSERT INTO `doctor_info` (`id`, `doctorName`, `doctorNum`, `phoneNum`, `hospitalName`, `department`, `specialty`, `username`) VALUES (1, '李建华', 'FD000001', '17204839460', '武汉市第一人民医院', '皮肤科', '皮肤疾病预防及诊疗', 'doctor1');
+INSERT INTO `doctor_info` (`id`, `doctorName`, `doctorNum`, `phoneNum`, `hospitalName`, `department`, `specialty`, `username`) VALUES (2, '张成明', 'FD000002', '19684829502', '武汉市第二人民医院', '口腔科', '口腔疾病预防及诊疗', 'doctor2');
+INSERT INTO `doctor_info` (`id`, `doctorName`, `doctorNum`, `phoneNum`, `hospitalName`, `department`, `specialty`, `username`) VALUES (3, '赵建伟', 'FD000003', '12244833461', '武汉市第三人民医院', '消化内科', '消化道疾病预防及诊疗', 'doctor3');
